@@ -49,20 +49,20 @@ public class SocksService {
         switch (operation) {
             case equal -> {
                 return sockBatchRepository.getByColorAndCottonPart(color, cottonPart).stream()
-                        .reduce(new SocksBatch(0, "", 0, 0),
-                                (a, b) -> new SocksBatch(0, "", 0, a.getQuantity() + b.getQuantity())
+                        .reduce(new SocksBatch(0, "", 0),
+                                (a, b) -> new SocksBatch(0, "", 0)
                         ).getQuantity();
             }
             case lessThan -> {
                 return sockBatchRepository.getAllByColorAndCottonPartLessThan(color, cottonPart).stream()
-                        .reduce(new SocksBatch(0, "", 0, 0),
-                                (a, b) -> new SocksBatch(0, "", 0, a.getQuantity() + b.getQuantity())
+                        .reduce(new SocksBatch(0, "", 0),
+                                (a, b) -> new SocksBatch(0, "", 0)
                         ).getQuantity();
             }
             case moreThan -> {
                 return sockBatchRepository.getAllByColorAndCottonPartMoreThan(color, cottonPart).stream()
-                        .reduce(new SocksBatch(0, "", 0, 0),
-                                (a, b) -> new SocksBatch(0, "", 0, a.getQuantity() + b.getQuantity())
+                        .reduce(new SocksBatch(0, "", 0),
+                                (a, b) -> new SocksBatch(0, "", 0)
                         ).getQuantity();
             }
         }

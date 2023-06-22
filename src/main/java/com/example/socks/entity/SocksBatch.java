@@ -24,4 +24,11 @@ public class SocksBatch {
     private String color;
     private Integer cottonPart;
     private Integer quantity;
+
+    public SocksBatch(int i, String red, int i1) {
+        this.cottonPart = i;
+        this.color = red;
+        this.quantity = i1;
+
+    }
 }
