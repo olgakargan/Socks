@@ -8,7 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
-
+/**
+ * Класс  SocksBatch
+ */
 @Entity
 
 @Getter
@@ -24,4 +26,11 @@ public class SocksBatch {
     private String color;
     private Integer cottonPart;
     private Integer quantity;
+
+    public SocksBatch(int i, String red, int i1) {
+        this.cottonPart = i;
+        this.color = red;
+        this.quantity = i1;
+
+    }
 }
