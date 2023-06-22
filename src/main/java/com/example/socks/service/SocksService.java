@@ -5,7 +5,9 @@ import com.example.socks.enums.Operations;
 import com.example.socks.repoistory.SocksRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
+/**
+ * Сервис-класс
+ */
 @Service
 @RequiredArgsConstructor
 public class SocksService {
